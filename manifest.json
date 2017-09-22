@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "MyMICDS",
+	"version": "1.0",
+
+	"description": "MyMICDS.net just wasn't enough? Calculate your grades on Canvas even if your teacher disabled them to eliminate stress.",
+	"author": "MyMICDS Development Team",
+	"homepage_url": "https://mymicds.net",
+
+	"icons": {
+		"48": "icons/mymicds.svg",
+		"96": "icons/mymicds.svg"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.instructure.com/courses/*/grades", "*://*.instructure.com/courses/*/grades/*"],
+			"js": ["calc-grades.js"]
+		}
+	]
+}
